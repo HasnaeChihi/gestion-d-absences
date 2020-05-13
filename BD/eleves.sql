@@ -47,6 +47,16 @@ CREATE TABLE `eleves` (
 INSERT INTO `eleves` (`ID_eleve`, `CNE`, `Nom`, `Prenom`, `Adresse`, `Ville`, `email`, `Photo`, `etat`) VALUES
 (1, 'S139022035', 'ACHAHBAR', 'ADNANE', 'ENSAT BP 1818', 'Tanger', 'ACHAHBAR@gmail.com', './photos/ACHAHBAR.png', 0),
 (2, 'R142034631', 'ADRAOUI', 'KHAWLA', 'ENSAT BP1818', 'Tanger', 'Adraouikha@gmail.com\r\n', './photos/ADRAOUI.png\r\n', 0);
+(3, 'S142446531', 'CHIHI', 'HASNAE', 'ENSAT BP1818', 'Tanger', 'hasnae@gmail.com\r\n', './photos/hasnae.png\r\n', 0);
+(4, 'V142012656', 'ELAKKOUCHI', 'SALMA', 'ENSAT BP1818', 'Tanger', 'salma@gmail.com\r\n', './photos/salma.png\r\n', 0);
+(5, 'B117878717', 'ELAZZIZI', 'HAMZA', 'ENSAT BP1818', 'Tanger', 'hamza@gmail.com\r\n', './photos/hamza.png\r\n', 0);
+(6, 'K141717170', 'EDRISII', 'ATAE', 'ENSAT BP1818', 'Tanger', 'Atae@gmail.com\r\n', './photos/atae.png\r\n', 0);
+(7, 'S142034631', 'ELJATTARI', 'MED', 'ENSAT BP1818', 'Tanger', 'eljattari@gmail.com\r\n', './photos/med.png\r\n', 0);
+(8, 'R118717177', 'ELYOUNSSI', 'MOUNA', 'ENSAT BP1818', 'Tanger', 'mouna@gmail.com\r\n', './photos/mouna.png\r\n', 0);
+(9, 'I117716778', 'ELOUAZZANI', 'ZOHRA', 'ENSAT BP1818', 'Tanger', 'zohra@gmail.com\r\n', './photos/zohra.png\r\n', 0);
+(10, 'N135454242', 'ELMOUSTACHIRI', 'YASSINE', 'ENSAT BP1818', 'Tanger', 'yassine@gmail.com\r\n', './photos/yas.png\r\n', 0);
+(11, 'R167161578', 'BOUKHALLAD', 'AISSAME', 'ENSAT BP1818', 'Tanger', 'aissame@gmail.com\r\n', './photos/aiss.png\r\n', 0);
+(12, 'S142055454', 'HASSANI', 'SOKYNA', 'ENSAT BP1818', 'Tanger', 'sokayna@gmail.com\r\n', './photos/soka.png\r\n', 0);
 
 --
 -- Index pour les tables déchargées
