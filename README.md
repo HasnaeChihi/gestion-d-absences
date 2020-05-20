@@ -1,1 +1,1 @@
-# mvc simple
+# mvc orienté objet
