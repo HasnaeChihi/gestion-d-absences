@@ -45,8 +45,8 @@ CREATE TABLE `eleves` (
 --
 
 INSERT INTO `eleves` (`ID_eleve`, `CNE`, `Nom`, `Prenom`, `Adresse`, `Ville`, `email`, `Photo`, `etat`) VALUES
-(1, 'S139022035', 'ACHAHBAR', 'ADNANE', 'ENSAT BP 1818', 'Tanger', 'ACHAHBAR@gmail.com', './photos/m.png', 0),
-(2, 'R142034631', 'ADRAOUI', 'KHAWLA', 'ENSAT BP1818', 'Tanger', 'Adraouikha@gmail.com\r\n', './photos/.png\r\n', 0);
+(1, 'S139022035', 'ACHAHBAR', 'ADNANE', 'ENSAT BP 1818', 'Tanger', 'ACHAHBAR@gmail.com', './photos/ACHAHBAR.png', 0),
+(2, 'R142034631', 'ADRAOUI', 'KHAWLA', 'ENSAT BP1818', 'Tanger', 'Adraouikha@gmail.com\r\n', './photos/ADRAOUI.png\r\n', 0);
 (3, 'S142446531', 'CHIHI', 'HASNAE', 'ENSAT BP1818', 'Tanger', 'hasnae@gmail.com\r\n', './photos/f.png\r\n', 0);
 (4, 'V142012656', 'ELAKKOUCHI', 'SALMA', 'ENSAT BP1818', 'Tanger', 'salma@gmail.com\r\n', './photos/f.png\r\n', 0);
 (5, 'B117878717', 'ELAZZIZI', 'HAMZA', 'ENSAT BP1818', 'Tanger', 'hamza@gmail.com\r\n', './photos/m.png\r\n', 0);

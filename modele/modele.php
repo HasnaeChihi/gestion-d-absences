@@ -1,37 +1,27 @@
 <?php
-
-    function getEleves(){
-        $bdd = new PDO('mysql:host=localhost;dbname=ensat;charset=utf8', 'root', '');
-       $eleves = $bdd->query('select CNE,Nom,Prenom,Adresse,Ville,email, Photo, etat , nb_absences from eleves');
-        return $eleves;
-    }
-    
-    // effectuee la cnx a la base de donnee
-    //instancie et renvoie l'objectif PDO associé
-    function getBdd() {
-        $bdd = new PDO('mysql:host=localhost;dbname=ensat;charset=utf8', 'root', '');
-        return $bdd;
-    }
-   
-   $bdd = new PDO('mysql:host=localhost;dbname=ensat;charset=utf8', 'root', '' , array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-
-   //Renvoie les informations sur un eleve
-function getEleve($idEleve) {
-$bdd = getBdd();
-$eleve = $bdd->prepare('select CNE,Nom,Prenom,Adresse,Ville,email, Photo, etat , nb_absences from eleves'
-. ' where ID_eleve=?');
-$eleve->execute(array($idEleve));
-if ($eleve->rowCount() == 1)
-return $eleve->fetch(); // Accès à la première ligne de résultat
-else
-throw new Exception("Aucun eleve ne correspond à l'identifiant '$idEleve'");
+abstract class Modele{
+ //objet PDO d'accès à la BD
+ private $bdd;
+ // Exécute une requête SQL éventuellement paramétrée
+protected function executerRequete($sql, $params = null) {
+  if ($params == null) {
+  $resultat = $this->getBdd()->query($sql); // exécution directe
+  }
+  else {
+  $resultat = $this->getBdd()->prepare($sql); // requête préparée
+  $resultat->execute($params);
+  }
+  return $resultat;
+  }
+   //Effectue la connexion à la BDD, instancie et renvoie l'objet PDO associé
+ private function getBdd(){
+   if($this->bdd==null){
+     //création de la connexion
+    $this->bdd = new PDO('mysql:host=localhost;dbname=ensat;charset=utf8','root'
+             , '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+   }
+   return $this->bdd;
+   } 
 }
-// Renvoie la liste des commentaires associés à un eleve
-function getCommentaires($idEleve) {
-$bdd = getBdd();
-$commentaires = $bdd->prepare('select CNE,Nom,Prenom,Adresse,Ville,email, Photo, etat , nb_absences from eleves'
-. ' where ID_eleve=?');
-$commentaires->execute(array($idEleve));
-return $commentaires; }
 
 ?>
